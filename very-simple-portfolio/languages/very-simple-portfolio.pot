@@ -1,0 +1,143 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Very Simple Portfolio\n"
+"POT-Creation-Date: 2025-09-02 16:11+0200\n"
+"PO-Revision-Date: 2025-09-02 16:11+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: preview-content/admin-redirect.php:38
+msgid "Minimalio Dashboard"
+msgstr ""
+
+#: preview-content/admin-redirect.php:46
+msgid "Welcome to Very Simple Portfolio!"
+msgstr ""
+
+#: preview-content/admin-redirect.php:47
+msgid "Child theme of Minimalio"
+msgstr ""
+
+#: preview-content/admin-redirect.php:49
+msgid "Very Simple Portfolio extends Minimalio with additional Theme Settings."
+msgstr ""
+
+#: preview-content/admin-redirect.php:51
+msgid "Please, check out this tutorial for using this child theme."
+msgstr ""
+
+#: preview-content/admin-redirect.php:54
+msgid "Very Simple Portfolio Tutorial"
+msgstr ""
+
+#: preview-content/admin-redirect.php:58
+msgid "View Demo Site"
+msgstr ""
+
+#: preview-content/admin-redirect.php:63
+msgid "Very Simple Portfolio Theme Screenshot"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+#: very-simple-portfolio-customizer/very-simple-portfolio-customizer.php:60
+msgid "Very Simple Portfolio"
+msgstr ""
+
+#: very-simple-portfolio-customizer/very-simple-portfolio-customizer.php:144
+msgid "Vertical Header Width"
+msgstr ""
+
+#: very-simple-portfolio-customizer/very-simple-portfolio-customizer.php:146
+#: very-simple-portfolio-customizer/very-simple-portfolio-customizer.php:163
+msgid "Number in PX values"
+msgstr ""
+
+#: very-simple-portfolio-customizer/very-simple-portfolio-customizer.php:161
+msgid "Vertical Header Border Width"
+msgstr ""
+
+#: very-simple-portfolio-customizer/very-simple-portfolio-customizer.php:180
+msgid "Vertical Header Border Color"
+msgstr ""
+
+#: very-simple-portfolio-customizer/very-simple-portfolio-customizer.php:205
+msgid "Vertical Menu Margin Top "
+msgstr ""
+
+#: very-simple-portfolio-customizer/very-simple-portfolio-customizer.php:207
+msgid "Number in REM values (1REM=16px)"
+msgstr ""
+
+#: very-simple-portfolio-customizer/very-simple-portfolio-customizer.php:222
+msgid "Portfolio/Blog Category Filtering Font Size"
+msgstr ""
+
+#: very-simple-portfolio-customizer/very-simple-portfolio-customizer.php:224
+#: very-simple-portfolio-customizer/very-simple-portfolio-customizer.php:241
+#: very-simple-portfolio-customizer/very-simple-portfolio-customizer.php:278
+msgid "Number in PX"
+msgstr ""
+
+#: very-simple-portfolio-customizer/very-simple-portfolio-customizer.php:239
+msgid "Portfolio/Blog Category Filtering Top Margin"
+msgstr ""
+
+#: very-simple-portfolio-customizer/very-simple-portfolio-customizer.php:256
+msgid "Portfolio/Blog Category Filtering Align "
+msgstr ""
+
+#: very-simple-portfolio-customizer/very-simple-portfolio-customizer.php:263
+msgid "Left"
+msgstr ""
+
+#: very-simple-portfolio-customizer/very-simple-portfolio-customizer.php:264
+msgid "Right"
+msgstr ""
+
+#: very-simple-portfolio-customizer/very-simple-portfolio-customizer.php:265
+msgid "Center"
+msgstr ""
+
+#: very-simple-portfolio-customizer/very-simple-portfolio-customizer.php:276
+msgid "Portfolio/Blog Post Card Border Width"
+msgstr ""
+
+#: very-simple-portfolio-customizer/very-simple-portfolio-customizer.php:297
+msgid "Portfolio/Blog Post Card Border Color"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://minimalio.org"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Very Simple Portfolio is a child theme built on Minimalio, offering a sleek "
+"and uncluttered WordPress solution tailored for creative professionals "
+"including artists, designers, photographers, and other creative "
+"professionals seeking to display their work in an aesthetically pleasing, "
+"distraction-free setting. This theme provides a refined, fast-performing "
+"platform for online portfolio presentation."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "mikulas-k"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://mikulaskarpeta.net/en"
+msgstr ""

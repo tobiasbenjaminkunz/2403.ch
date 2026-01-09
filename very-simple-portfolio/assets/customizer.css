@@ -1,0 +1,349 @@
+/* Collapse the shortcode widget wrapper so its children can become grid items */
+.elementor-element.mc-release-fill{
+  display: contents !important;
+}
+
+/* Collapse Elementor's widget container wrapper */
+.elementor-element.mc-release-fill > .elementor-widget-container{
+  display: contents !important;
+}
+
+/* IMPORTANT: Elementor wraps shortcode output in .elementor-shortcode */
+.elementor-element.mc-release-fill .elementor-shortcode{
+  display: contents !important;
+}
+
+
+/* Each embed becomes one grid cell */
+.mc-release-cell{
+  width: 100%;
+}
+
+.mc-release-cell iframe{
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Make the GRID use fixed row units so spanning works */
+.mc-home-grid{
+  grid-auto-rows: 170px;           /* adjust this number */
+  grid-auto-flow: row dense;       /* helps pack items nicely */
+}
+
+/* Default (track/single) height */
+.mc-release-cell iframe{
+  height: 152px !important;
+}
+
+/* Albums/playlists are taller and should take 2 rows */
+.mc-release-album,
+.mc-release-playlist{
+  grid-row: span 2;
+}
+
+.mc-release-album iframe,
+.mc-release-playlist iframe{
+  height: 352px !important;        /* Spotify album height */
+}
+
+.mc-release-empty{
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* BACKGROUND */
+/* Base */
+body.page-id-17,
+body.page-id-70{
+  position: relative;
+  background: none !important;
+
+  --mc-header-offset-desktop: 90px;
+  --mc-header-offset-mobile: 80px;
+}
+
+/* Fixed background layer */
+body.page-id-17::before,
+body.page-id-70::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+
+  background-image: url("https://2403.ch/wp-content/uploads/2026/01/66c9521e-6255-41d5-b6ac-0cd220569648.png");
+  background-repeat: no-repeat;
+
+  background-size: auto calc(100dvh - var(--mc-header-offset-desktop));
+  background-position: center var(--mc-header-offset-desktop);
+
+  z-index: 0;
+  pointer-events: none;
+
+  transform: translate3d(0,0,0);
+  will-change: transform;
+}
+
+/* Content above background */
+body.page-id-17 #page,
+body.page-id-17 .site,
+body.page-id-17 .site-content,
+body.page-id-70 #page,
+body.page-id-70 .site,
+body.page-id-70 .site-content{
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+}
+
+/* Mobile */
+@media (max-width: 767px){
+  body.page-id-17::before,
+  body.page-id-70::before{
+    background-size: auto calc(100dvh - var(--mc-header-offset-mobile));
+    background-position: center var(--mc-header-offset-mobile);
+  }
+}
+
+
+/* ===== HEADER STABILITY FIX ===== */
+
+/* 1) Force consistent header padding (py-8 is too aggressive / inconsistent) */
+#wrapper-header,
+#wrapper-header.header__fixed,
+#wrapper-header.header__fixed.active{
+  padding-top: 18px !important;
+  padding-bottom: 18px !important;
+  min-height: 0 !important;
+  height: auto !important;
+  max-height: none !important;
+}
+
+/* 2) On mobile, even tighter */
+@media (max-width: 768px){
+  #wrapper-header,
+  #wrapper-header.header__fixed,
+  #wrapper-header.header__fixed.active{
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+  }
+}
+
+/* 3) Prevent the header row / menu from wrapping (wrap = sudden tall header) */
+#wrapper-header .header__row{
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 24px;
+}
+
+/* 4) Keep the menu on one line */
+#wrapper-header .header__menu{
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
+  gap: 24px;
+}
+
+/* 5) If the menu gets tight, allow horizontal scroll instead of wrapping */
+@media (max-width: 768px){
+  #wrapper-header .menu-main-container{
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.mc-concert{
+  display:grid;
+  grid-template-columns: 120px 1fr;
+  gap:16px;
+  text-decoration:none;
+  color:inherit;
+  border:1px solid #000;
+  padding:12px 14px;
+  background: rgba(255,255,255,0.85);
+}
+
+.mc-concert-date{ font-weight:700; }
+.mc-concert-artists{ font-weight:700; }
+.mc-concert-venue{ opacity:.85; }
+
+@media (max-width:768px){
+  .mc-concert{ grid-template-columns:1fr; gap:6px; }
+}
+
+/* Make the concerts shortcode widget "spill" items into the parent grid */
+.elementor-element.mc-concert-fill{
+  display: contents !important;
+}
+.elementor-element.mc-concert-fill > .elementor-widget-container{
+  display: contents !important;
+}
+.elementor-element.mc-concert-fill .elementor-shortcode{
+  display: contents !important;
+}
+
+/* ONLY spill on widgets where you add mc-release-fill */
+.elementor-element.mc-release-fill .mc-release-items{
+  display: contents !important;
+}
+
+
+/* Each concert card is one grid cell */
+.mc-concert{
+  width: 100%;
+}
+
+/* ===== 2403 concert cards ===== */
+.mc-concerts,
+.mc-concert,
+.mc-concert *{
+  font-family: "Azeret Mono","Abel", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.mc-concert{
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 0;
+
+  border: 1px solid #000;
+  background: rgba(255,255,255,1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  padding: 14px 16px;
+  line-height: 1.2;
+}
+
+/* left column (date) */
+.mc-concert-date{
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  padding-right: 14px;
+  border-right: 1px solid #000;
+  white-space: nowrap;
+}
+
+/* right column */
+.mc-concert-meta{
+  padding-left: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+/* the “details” link (event name / title) */
+.mc-concert-details a{
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* optional fields */
+.mc-concert-artists{
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.mc-concert-event{
+  font-weight: 600;
+}
+
+.mc-concert-city{
+  opacity: 0.85;
+}
+
+/* venue link: subtle underline like a print layout */
+.mc-concert-venue a{
+  color: #000;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+/* hover: subtle “poster” interaction */
+@media (hover:hover){
+  .mc-concert:hover{
+    background: rgba(255,255,255,0.85);
+  }
+}
+
+/* mobile layout */
+@media (max-width: 768px){
+  .mc-concert{
+    grid-template-columns: 1fr;
+  }
+
+  .mc-concert-date{
+    border-right: none;
+    padding-right: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+  }
+
+  .mc-concert-meta{
+    padding-left: 0;
+    padding-top: 10px;
+  }
+}
+
+.mc-concert-date,
+.mc-concert-meta{
+  text-transform: uppercase;
+}
+
+.mc-concerts-empty{
+  font-family: "Azeret Mono","Abel", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  text-transform: uppercase;
+  border: 1px solid #000;
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 14px 16px;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+}
+
+/* Keep everything inside the concert box */
+.mc-concert{
+  overflow: hidden;
+}
+
+/* Allow long strings to wrap instead of spilling out */
+.mc-concert *{
+  min-width: 0;              /* important for CSS grid children */
+  overflow-wrap: anywhere;   /* breaks long words */
+  word-break: break-word;
+}
+
+/* Specifically important for these text blocks */
+.mc-concert-details,
+.mc-concert-artists,
+.mc-concert-event,
+.mc-concert-venue,
+.mc-concert-city{
+  min-width: 0;
+}
+
+/* Internal grid (for artist pages) */
+.mc-release-grid{
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-auto-flow: row dense;
+}
+
+/* Keep album span working in internal grid too */
+.mc-release-grid .mc-release-album,
+.mc-release-grid .mc-release-playlist{
+  grid-row: span 2;
+}
+
+/* ONLY spill concerts on widgets where you add mc-concert-fill */
+.elementor-element.mc-concert-fill .mc-concerts{
+  display: contents !important;
+}
