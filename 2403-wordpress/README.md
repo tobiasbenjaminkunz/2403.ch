@@ -1,7 +1,3 @@
-# 2403.ch
-Abgabe Repository 2403.ch IM5
-
-
 # 2403.ch – WordPress Website (Elementor Free) for a Music Collective
 
 Live: https://2403.ch
@@ -36,6 +32,9 @@ Because the website will be used and updated continuously, the focus was on:
   - short description (artist-written)
   - relevant links (socials, Spotify)
   - newest releases via Spotify embeds (automated)
+
+### Change from initial idea: Shopify integration (removed)
+An early concept was to include a **Shopify integration** (e.g., merch shop). During planning, the collective decided against it because the expected sales volume would not justify the additional cost and complexity at this stage. The project focus shifted toward a lightweight site that prioritizes music discovery, booking, and maintainable content updates.
 
 ---
 
@@ -230,6 +229,7 @@ This repo focuses on **project-relevant code and documentation** rather than Wor
   - CSS grid techniques for layout control
 - Avoiding scraping and using WordPress-native content structures leads to more stable automation.
 - Third-party embeds simplify linking and publishing but come with performance costs.
+- Feature ideas (like a shop integration) should be evaluated early against real costs/benefits; removing Shopify kept the project focused and maintainable.
 
 ---
 
