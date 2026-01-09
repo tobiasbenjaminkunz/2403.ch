@@ -19,6 +19,15 @@
 
 # Configuration
 wp-config.php
+# Sensitive / local tooling
+.env
+.env.*
+sftp.json
+*.sql
+*.sqlite
+*.pem
+*.key
+
 
 # Example themes
 /wp-content/themes/twenty*/
