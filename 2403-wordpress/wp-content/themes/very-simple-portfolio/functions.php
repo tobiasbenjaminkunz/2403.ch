@@ -35,6 +35,17 @@ function very_simple_portfolio_child_add_custom_stylesheet()
     wp_enqueue_style('very-simple-portfolio-child-custom-style', get_stylesheet_directory_uri() . '/assets/very-simple-portfolio-styles.css', false, '1.0', 'all');
 }
 
+// Enqueue customizer.css (moved from "Customizer > Additional CSS" into a file)
+add_action('wp_enqueue_scripts', function () {
+  wp_enqueue_style(
+    'mc-customizer-css',
+    get_stylesheet_directory_uri() . '/assets/customizer.css',
+    array(),
+    '1.0'
+  );
+}, 110);
+
+
 //Make Very Simple Portfolio available for translation.
 load_theme_textdomain('very-simple-portfolio', get_stylesheet_directory_uri() . '/languages');
 
